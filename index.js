@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -68,7 +68,7 @@ if(err instanceof multer.MulterError){
 } else {
     console.log("1");
     console.log(req.file.filename)
-    var imgsrc = 'http://localhost:3000/images/' + req.file.filename
+    var imgsrc = 'http://localhost:5000/images/' + req.file.filename
     // buat variable penampung data dan query sql
         const data = { ...req.body};
         const judul = data.judul;
